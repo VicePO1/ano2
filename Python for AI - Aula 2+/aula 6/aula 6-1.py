@@ -1,5 +1,6 @@
 import tkinter as tk
-from random import randint
+
+empregados={}
 
 def gui():
    root=tk.Tk()
@@ -26,8 +27,8 @@ def gui():
    nif_entry = tk.Entry(root, width=60)
    nif_entry.place(x=90, y=240)
 
-   registar_button=tk.Button(root,width=15,height=3,text="Registar")
-   registar_button.place(x=50,y=310,command=registar)
+   registar_button=tk.Button(root,width=15,height=3,text="Registar",command=registar)
+   registar_button.place(x=50,y=310)
 
    root.mainloop()
 
@@ -38,8 +39,8 @@ def registar(name_entry,idade_entry,gender_entry,nif_entry):
     genero = gender_entry.get
     nif = nif_entry.get
 
-    with open("CV.txt", "a") as file:
-        file.write(f"")
+    empregados[nif]=[nome,idade,genero]
+    print(empregados)
 
 
 
