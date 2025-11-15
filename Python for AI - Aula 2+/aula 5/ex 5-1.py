@@ -8,21 +8,21 @@ def criar_janela():
    root.mainloop()
 
 def pesquisa_google():
-	pyautogui.press('Win')
-	sleep(1)
-	pyautogui.write("Chrome")
-	sleep(1)
-	pyautogui.press('Enter')
-	sleep(1.5)
-	for i in range(0, 32):
-		pyautogui.press('Tab')
-		sleep(0.1)
-	pyautogui.press('Enter')
-	sleep(1)
-	pyautogui.write("test")
-	sleep(0.3)
-	pyautogui.press('Enter')
-	sleep(5)
+    pyautogui.press('Win')
+    sleep(1)
+    pyautogui.write("Chrome")
+    sleep(1)
+    pyautogui.press('Enter')
+    sleep(1.5)
+    for i in range(0, 32):
+        pyautogui.press('Tab')
+        sleep(0.1)
+    pyautogui.press('Enter')
+    sleep(1)
+    pyautogui.write("test")
+    sleep(0.3)
+    pyautogui.press('Enter')
+    sleep(5)
 
 
 
