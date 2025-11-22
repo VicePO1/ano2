@@ -6,6 +6,7 @@ numfuncoes = 0
 
 with open('biblioteca', 'r') as file:
     for linha in file:
+        linha = linha.split(';')
         funcoes[numfuncoes]=linha
 
 print(funcoes)
