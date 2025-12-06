@@ -8,6 +8,7 @@ with open('biblioteca', 'r') as file:
     for linha in file:
         linha = linha.split(';')
         funcoes[numfuncoes]=linha
+        numfuncoes += 1
 
 print(funcoes)
 rec = sr.Recognizer()
@@ -19,5 +20,8 @@ with sr.Microphone() as mic:
     texto = rec.recognize_google(audio, language='pt-BR')
     print(texto)
     for i in funcoes:
-        if funcoes[i][0]==texto:
-            exec(funcoes[i][1])
+        if funcoes[i][0] == texto:
+            c_funcoes = funcoes[i]
+            for i in c_funcoes:
+                if i != 0:
+                    exec(c_funcoes[i])
